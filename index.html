@@ -19,9 +19,9 @@
     <h1>SomeSN-url-shortener's Awesome Center</h1>
   </div>
 
-  <section class="awesomes-1">
-		<div class="awesome-center">
+  <section class="wrapper">
 
+		<div class="awesome-center awesomes-1">
 			<article class="awesome">
 				<img src="https://i.pinimg.com/originals/51/22/64/512264ee84d0f738a4056badb27eb775.jpg" alt="">
 
@@ -31,11 +31,8 @@
 				</div>
 			</article>
 		</div>
-	</section>
 
-  <section class="awesomes-2">
-		<div class="awesome-center">
-
+		<div class="awesome-center awesomes-2">
 			<article class="awesome">
 				<img src="http://www.thisiscolossal.com/wp-content/uploads/2016/06/fish-1.jpg" alt="">
 
@@ -45,11 +42,8 @@
 				</div>
 			</article>
 		</div>
-	</section>
 
-  <section class="awesomes-3">
-		<div class="awesome-center">
-
+		<div class="awesome-center awesomes-3">
 			<article class="awesome">
 				<img src="https://images.pexels.com/photos/157465/pexels-photo-157465.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=350" alt="">
 
@@ -59,17 +53,28 @@
 				</div>
 			</article>
 		</div>
-	</section>
+  </section>
 
 	<section class="form">
     <div class="form-center">
 		<h2>Add new awesome</h2>
 	<form action="/new-awesome" method="POST">
-	  <input type="text" name="add-url" placeholder="awesome image url"><br>
-	  <input type="text" name="image-name" placeholder="image name"><br>
-
-	  <textarea rows="10" cols="1" name="detail" form="usrform" placeholder="Why it is so awesome"></textarea>
-	</form>
+    <div>
+      <!-- <label for="GET-name">Awesome image:</label><br> -->
+	    <input id="image" type="text" name="add-url" placeholder="awesome image url">
+    </div>
+    <div>
+      <!-- <label for="image">Awesome Title:</label><br> -->
+      <input id="title" type="text" name="image-name" placeholder="awesome title">
+    </div>
+    <div>
+      <!-- <label for="detail">Awesome Detail:</label><br> -->
+	    <textarea id="detail" rows="4" cols="50" name="detail" form="usrform" placeholder="awesome detail"></textarea>
+    </div>
+    <div>
+      <input type="submit" value="Submit">
+    </div>
+  </form>
   </div>
 	</section>
 </div> <!-- container -->

@@ -15,48 +15,25 @@ p {
   text-align: center;
 }
 
-
 .container {
   display: grid;
-  -ms-display: grid;
+    -ms-display: grid;
 
   width: 90vw;
   grid-template-columns: 1fr;
-  -ms-grid-template-columns: 1fr;
-  grid-template-rows: 100px 1fr 1fr 1fr 200px;
-  -ms-grid-template-rows: 100px 1fr 1fr 1fr 200px;
+    -ms-grid-template-columns: 1fr;
+  grid-template-rows: 100px 1fr 200px;
+    -ms-grid-template-rows: 100px 1fr 200px;
   /* grid-gap: 10px; */
 
   grid-template-areas:
     "head"
-    "one"
-    "two"
-    "three"
+    "wrap"
     "form";
 }
 
-.heading {
-  grid-area: head;
-}
-.awesome-1 {
-  grid-area: one;
-}
-
-.awesome-2 {
-  grid-area: two;
-}
-
-.awesome-3 {
-  grid-area: three;
-}
-
-.heading {
-  align-self: center;
-}
-
-.form {
-  grid-area: form;
-}
+.heading { grid-area: head; }
+.wrapper { grid-area: wrap }
 
 img {
   width: 100%;
@@ -71,46 +48,45 @@ img {
 form input,
 form textarea {
   width: 85%;
-  height: 20px;
   padding: 10px 10px;
   margin: 10px 20px;
 }
-
-article .awesome {
-  display: grid;
-  justify-content: center;
-  align-items: center;
+form input {
+  height: 20px;
 }
 
 
 
 /*=================================*/
 @media screen and (min-width:576px) {
-  .container {
+  .wrapper {
     display: grid;
     height: 100vh;
     grid-template-columns: repeat(3, 1fr);
+      -ms-grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 100px auto 200px;
+      -ms-grid-template-rows: 100px auto 200px;
     grid-gap: 50px;
 
     width: 80vw;
     margin: 10px auto;
 
     grid-template-areas:
-      "head head head"
-      "one  two  three"
-      "form form form";
+      "one two three"
   }
+
+  .awesome-1 { grid-area: one; }
+  .awesome-2 { grid-area: two; }
+  .awesome-3 { grid-area: three; }
 
   img {
     width: 100%;
     padding: 0;
   }
 
-  .awesome-center {
+  .awesome{
     outline: 1px solid #E5E5E5;
     outline-offset: 5px;
-
   }
 
   .form-center {
@@ -121,6 +97,6 @@ article .awesome {
 
   form input,
   form textarea {
-    width: 400px;
+    width: 40vw;
   }
 }
