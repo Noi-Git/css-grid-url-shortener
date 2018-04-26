@@ -4,24 +4,27 @@
   box-sizing: border-box;
 }
 
-autoprefixer({ grid: true })
+/* autoprefixer({ grid: true }) */
 
 h1, h2, h3 {
-  /* text-align: center; */
-  /* padding: 20px 0; */
+  text-align: center;
+  padding: 20px 0;
 }
 
 p {
-  /* text-align: center; */
+  text-align: center;
 }
 
 
 .container {
   display: grid;
+  -ms-display: grid;
 
   width: 90vw;
   grid-template-columns: 1fr;
+  -ms-grid-template-columns: 1fr;
   grid-template-rows: 100px 1fr 1fr 1fr 200px;
+  -ms-grid-template-rows: 100px 1fr 1fr 1fr 200px;
   /* grid-gap: 10px; */
 
   grid-template-areas:
@@ -30,8 +33,6 @@ p {
     "two"
     "three"
     "form";
-
-  justify-content: center;
 }
 
 .heading {
@@ -59,6 +60,7 @@ p {
 
 img {
   width: 100%;
+  padding: 0 20px;
 }
 
 .awesome-center {
@@ -102,6 +104,7 @@ article .awesome {
 
   img {
     width: 100%;
+    padding: 0;
   }
 
   .awesome-center {
